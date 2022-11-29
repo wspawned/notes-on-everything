@@ -42,10 +42,40 @@
 
   container : DOM element exists outside of parent component.
 
-* Reconciliation is process of deciding whether an update is necessary.
+* Reconciliation : The Virtual DOM (V-DOM) is an in-memory representation of Real DOM. The representation of a UI is kept in memory and synced with the "real" DOM. It's a step that happens between the render function being called and the displaying of elements on the screen. This entire process is called reconciliation. Simply, it is the process of deciding whether an update is necessary.
 
 * React.ref is used for directly accession to a DOM node.
 
 * useCallback is a hook used to prevent a function from being recreated on every component render.
 
 * Flux helps react for keeping their data uni-directional. It is used for state management, like Redux.
+
+* JSX gets transpiled to a React.createElement() function tree
+
+  ```
+  const Button = ({ onLogin }) => React.createElement(
+  'div',
+  { id: 'login-btn', onClick: onLogin },
+  'Login'
+  )
+  ```
+
+* Error Boundaries must be used as class component.
+
+* State & Props : Props get passed to the component similar to function parameters whereas state is managed within the component similar to variables declared within a function.
+
+* JavaScript is an interpreted language, not a compiled language. JavaScript is interpreted at runtime by the client browser.
+
+* The Virtual DOM works in three simple steps.
+
+  * Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation.
+  * Then the difference between the previous DOM representation and the new one is calculated.
+  * Once the calculations are done, the real DOM will be updated with only the things that have actually changed.
+<br>
+<br>
+
+* The Shadow DOM is a browser technology designed primarily for scoping variables and CSS in web components. The Virtual DOM is a concept implemented by libraries in JavaScript on top of browser APIs.
+
+* React Fiber is the new reconciliation engine or re-implementation of core algorithm in React v16. The goal of React Fiber is to increase its suitability for areas like animation, layout, gestures, ability to pause, abort, or reuse work and assign priority to different types of updates; and new concurrency primitives. Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.
+
+* 
