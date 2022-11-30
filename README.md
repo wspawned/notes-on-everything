@@ -78,4 +78,14 @@
 
 * React Fiber is the new reconciliation engine or re-implementation of core algorithm in React v16. The goal of React Fiber is to increase its suitability for areas like animation, layout, gestures, ability to pause, abort, or reuse work and assign priority to different types of updates; and new concurrency primitives. Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.
 
+* JavaScript engine is a software component that executes JavaScript code. All modern browsers have their own version.
+
+  * V8 – Open-source JavaScript Engine developed by Google for Chrome
+  * SpiderMonkey – The JavaScript Engine powering Mozilla Firefox
+  * JavaScriptCore – Open-source JavaScript Engine developed by Apple for Safari
+  * Chakra – A JavaScript Engine for Microsoft Edge
+  * JerryScript – A JavaScript engine for the Internet of Things (Iot).
+<br>
+<br>
+
 * 
