@@ -1,4 +1,4 @@
-# NOTES
+# NOTES ON EVERYTHING
 
 ## REACT
 
@@ -88,4 +88,60 @@
 <br>
 <br>
 
-* 
+## REACT-ROUTER
+---
+### Router V6 vs V5
+
+Instead of Switch there is Routes.
+No Redirect anymore, now it is Navigate
+
+```
+<Routes>
+  <Route path="/" element={<Navigate replace to="/welcome" />} />
+  <Route path="/welcome" element={<Welcome />} />
+</Routes>
+```
+---
+Nested Routes
+
+```
+//app.js
+<Routes>
+  <Route path="/" element={<Navigate replace to="/welcome" />} >
+    <Route path="new-user" element={<p>Welcome, New User!</p>} />
+  </Route>
+  <Route path="/welcome/*" element={<Welcome />} />
+</Routes>
+```
+
+```
+//welcome.js
+const Welcome = () => {
+  return (
+    <h1>Welcome</h1>
+    <Link to="new-user">New User</Link>
+    <Outlet/>
+  )
+}
+```
+
+Outlet defines the position of NewUser component in the welcome/new-user page.
+Link sends user to /welcome/new-user without writhing full path.
+
+---
+useNavigate() instead of History
+
+Can be used in useEffect or at the end of HTTP request for utilization.
+
+```
+PREVIOUS PAGE
+navigate(-1);
+
+FORWARD
+navigate(1);
+```
+
+---
+In v5, Prompt was for preventing navigation if there is unsaved changes on page. In Router v6 it is not exist for now.
+
+---
